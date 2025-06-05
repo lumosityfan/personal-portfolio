@@ -1,3 +1,15 @@
+# Personal Portfolio for Jeff Xie
+
+This site contains the personal portfolio for Jeff Xie. It contains the projects he has worked on as well as the experience and goals for the future. 
+
+This site used React and TailwindCSS for the front-end and was deployed through Heroku. You may start the server containing the website through the following sections involving Create React App, which was used to initialize the project.
+
+To download the dependencies for the project if you want to run the website on your local device, do this command:
+
+npm install framer-motion react-simple-typewriter recharts @radix-ui/react-switch
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
