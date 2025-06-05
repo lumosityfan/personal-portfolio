@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .App {
   text-align: center;
 }
@@ -36,3 +38,205 @@
     transform: rotate(360deg);
   }
 }
+
+/* General styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container.light {
+  background-color: white;
+  color: black;
+}
+
+.container.dark {
+  background-color: #0f172a; /* gray-950 */
+  color: white;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Dark mode toggle */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 40rem;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+
+.hero .cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero .cta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* About section */
+.about {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.about h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Projects grid */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 3rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card.dark {
+  background-color: #1e293b;
+  color: white;
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.project-card p {
+  padding-bottom: 1rem;
+}
+
+/* Skills Radar */
+.skills {
+  padding: 3rem 1.5rem;
+}
+
+.skills h3 {
+  text-align: center;
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Contact form */
+.contact {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.contact h3 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.contact .status {
+  margin-top: 0.5rem;
+}
+
+.contact .status.success {
+  color: #22c55e;
+}
+
+.contact .status.error {
+  color: #ef4444;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
+  opacity: 0.6;
+}
+
