@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer } from 'recharts';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { GrDocumentPdf } from "react-icons/gr";
 
 const skills = [
   { skill: 'Algorithms', value: 80 },
@@ -80,7 +81,7 @@ export default function Portfolio() {
         transition={{ duration: 0.6 }}
         className="flex justify-between items-center px-6 py-4"
       >
-        <h1 className="text-2xl font-bold"><a href="/">Jeff Xie • CS Portfolio</a></h1>
+        <h1 className="text-2xl font-bold"><a href="/">Jeff Xie • Backend & Cloud Software Engineer</a></h1>
         <div className="flex items-center gap-2">
           <span>Dark Mode</span>
           <Switch checked={dark} onCheckedChange={() => setDark(!dark)} />
@@ -94,11 +95,11 @@ export default function Portfolio() {
         className="text-center py-10"
       >
         <h2 className="text-4xl font-bold mb-4">
-          <Typewriter words={["Hi, I'm Jeff", "Software Engineer", "Mixed Reality Innovator", "AI Explorer"]} loop={true} />
+          <Typewriter words={["Hi, I'm Jeff", "Software Engineer", "Backend Developer", "Cloud Infrastructure Maintainer", "AI Explorer"]} loop={true} />
         </h2>
         <p className="text-lg max-w-xl mx-auto">
-          I’m a curious and pragmatic developer with a passion for elegant systems and thoughtful design.
-          Having finished my M.S. in Computer Science, I'm exploring the intersection of AI and human-computer interaction.
+          Software engineer focused on backend systems, APIs, and cloud infrastructure. 
+          I hold an M.S. in Computer Science and enjoy designing reliable, scalable services.
         </p>
         <div className="flex justify-center gap-4 mt-6">
           <a href="https://github.com/lumosityfan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -106,6 +107,9 @@ export default function Portfolio() {
           </a>
           <a href="https://www.linkedin.com/in/lumosityfan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin className="text-2xl" />
+          </a>
+          <a href="/JeffXie-Resume-February2026.pdf" aria-label="Download Resume" download>
+            <GrDocumentPdf className="text-2xl" />
           </a>
         </div>
       </motion.section>
@@ -121,11 +125,13 @@ export default function Portfolio() {
           <CardContent className="bg-green-400">
         <h3 className="text-2xl font-semibold mb-4">About Me</h3>
         <p>
-          Ever since I wrote my first line of Python in high school, I've been obsessed with building things that work beautifully.
-          Whether it’s crafting intelligent tools or debugging edge-case bugs, I thrive on problem-solving with purpose.
+          I’m a software engineer with a strong foundation in backend development and systems design. 
+          I enjoy building software that is reliable, maintainable, and thoughtfully engineered, 
+          whether that’s designing APIs, debugging edge-case failures, or improving system performance.
         </p>
         <p className="mt-4">
-          Outside of coding, I enjoy watching sports, playing video games, and reading books. Feel free to reach out if you want to collaborate or just talk tech!
+          I recently completed my M.S. in Computer Science and am particularly interested in backend, platform, and infrastructure-adjacent roles. 
+          Outside of coding, I enjoy sports, video games, and reading, and I’m always happy to talk tech or collaborate on interesting problems.
         </p>
         </CardContent>
         </Card>
@@ -186,7 +192,7 @@ export default function Portfolio() {
             name="name"
             placeholder="Your Name"
             required
-            className="bg-red-400 w-full p-2 border rounded text-black"
+            className="w-full p-2 border rounded text-black"
           />
           <motion.input
             whileFocus={{ scale: 1.02 }}
@@ -194,7 +200,7 @@ export default function Portfolio() {
             name="email"
             placeholder="Your Email"
             required
-            className="bg-red-400 w-full p-2 border rounded text-black"
+            className="w-full p-2 border rounded text-black"
           />
           <motion.textarea
             whileFocus={{ scale: 1.02 }}
@@ -202,7 +208,7 @@ export default function Portfolio() {
             placeholder="Your Message"
             rows="5"
             required
-            className="bg-red-400 w-full p-2 border rounded text-black"
+            className="w-full p-2 border rounded text-black"
           ></motion.textarea>
           <input type="hidden" name="_captcha" value="true" />
           <Button type="submit">Send Message</Button>
@@ -212,7 +218,7 @@ export default function Portfolio() {
       </motion.section>
 
       <footer className="text-center py-6 text-sm opacity-60">
-        &copy; 2025 Jeff Xie. All rights reserved.
+        &copy; 2026 Jeff Xie. All rights reserved.
       </footer>
     </motion.div>
   );
