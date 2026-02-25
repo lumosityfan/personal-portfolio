@@ -5,12 +5,12 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GrDocumentPdf } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
-export default function PCA() {
+export default function SpacesuitTesting() {
   const [dark, setDark] = useState(false);
 
   return (
     <div className={dark ? "dark bg-gray-900 text-gray-100 min-h-screen" : "bg-gray-50 text-gray-900 min-h-screen"}>
-
+      
       {/* HEADER */}
       <motion.div
         initial={{ y: -50, opacity: 0 }}
@@ -61,17 +61,16 @@ export default function PCA() {
       {/* CONTENT */}
       <div className="max-w-4xl mx-auto px-6 py-12 space-y-10">
 
-        {/* Title & Meta */}
         <div>
           <h2 className="text-3xl font-bold mb-2">
-            PCA Implementation
+            Spacesuit Testing Apparatus
           </h2>
           <p className="text-gray-700 dark:text-gray-500">
-            Personal Project — Dimensionality Reduction & Face Detection
+            Software Contractor — NASA Artemis Program
           </p>
 
           <div className="flex flex-wrap gap-2 mt-4">
-            {["Python", "NumPy", "Linear Algebra", "Computer Vision", "Machine Learning"].map((tech) => (
+            {["Python", "pytest", "Trick Simulation", "CI/CD"].map((tech) => (
               <span
                 key={tech}
                 className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-3 py-1 rounded-lg text-sm font-medium"
@@ -82,94 +81,71 @@ export default function PCA() {
           </div>
         </div>
 
-        {/* Overview */}
         <section>
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-500 mb-2">Overview</h3>
           <p className="text-gray-700 dark:text-gray-500">
-            This project implements Principal Component Analysis (PCA) from scratch to perform
-            dimensionality reduction on high-dimensional datasets. The implementation is applied
-            to face detection, demonstrating how PCA can extract meaningful structure from
-            complex image data and dramatically reduce computational cost while preserving
-            discriminative features.
+            As a contractor supporting NASA’s Artemis mission, I developed an
+            automated testing framework to validate mission-critical spacesuit
+            software and hardware interfaces. The system improved reliability,
+            enabled repeatable regression testing, and reduced manual validation
+            effort in a safety-critical aerospace environment.
           </p>
         </section>
 
-        {/* The Problem */}
         <section>
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-500 mb-2">The Problem</h3>
           <p className="text-gray-700 dark:text-gray-500">
-            High-dimensional datasets — such as raw pixel representations of facial images —
-            suffer from the curse of dimensionality: high memory costs, slow computation, and
-            redundant features that hinder pattern recognition. Effective dimensionality reduction
-            is essential to make such datasets tractable for downstream machine learning tasks.
+            Spacesuit control systems involve complex interactions between
+            embedded software and hardware components. Existing workflows
+            relied heavily on manual test execution and physical hardware
+            validation, slowing iteration and limiting regression coverage.
           </p>
         </section>
 
-        {/* Solution */}
         <section>
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-500 mb-2">Solution & Contributions</h3>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-500">
             <li>
-              Implemented PCA from first principles using <strong>NumPy</strong>, including
-              covariance matrix computation, eigendecomposition, and projection onto principal components.
+              Integrated <strong>pytest</strong> with the Trick simulation framework
+              to enable automated simulation-driven validation.
             </li>
             <li>
-              Applied the algorithm to facial image datasets to extract "eigenfaces" — the
-              directions of maximum variance in pixel space.
+              Designed comprehensive regression test suites for control logic
+              and hardware interface behaviors.
             </li>
             <li>
-              Validated reconstruction quality at varying levels of component retention,
-              demonstrating the tradeoff between compression and fidelity.
+              Enabled hardware validation within simulation environments to
+              reduce dependency on physical test runs.
             </li>
             <li>
-              Used the reduced-dimension representations to support face detection and
-              classification tasks.
+              Built a CI/CD pipeline to automatically trigger regression tests
+              on code changes.
             </li>
           </ul>
         </section>
 
-        {/* Technical Architecture */}
         <section>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-500 mb-2">Technical Approach</h3>
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-500 mb-2">Technical Architecture</h3>
           <p className="text-gray-700 dark:text-gray-500">
-            The pipeline centers on computing the data covariance matrix and applying
-            eigendecomposition to identify the axes of greatest variance. Images are projected
-            onto the top-k eigenvectors, producing compact representations that retain the most
-            discriminative information. This eigenface basis is then used to compare and identify
-            faces in reduced-dimensional space.
+            The Trick simulation environment executed system models while
+            Python-based pytest frameworks orchestrated automated validation.
+            CI/CD automation ensured regression testing occurred consistently
+            across builds, providing rapid feedback and structured failure
+            reporting.
           </p>
         </section>
 
-        {/* Impact */}
         <section>
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-500 mb-2">Impact</h3>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-500">
-            <li>Demonstrated strong grasp of linear algebra fundamentals applied to real data.</li>
-            <li>Achieved significant dimensionality reduction with minimal loss of visual fidelity.</li>
-            <li>Produced a reusable PCA module applicable to any high-dimensional dataset.</li>
+            <li>Improved automated regression coverage.</li>
+            <li>Reduced manual validation workload.</li>
+            <li>Accelerated development feedback cycles.</li>
+            <li>Strengthened reliability assurance for Artemis systems.</li>
           </ul>
         </section>
 
-        {/* GitHub CTA */}
-        <section>
-          <a
-            href="https://github.com/lumosityfan/pca_implementation"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg transition"
-          >
-            <FaGithub className="text-lg" />
-            View on GitHub
-          </a>
-        </section>
-
       </div>
-
-      {/* FOOTER */}
-      <footer className="text-center py-6 text-sm text-gray-400 dark:text-gray-600">
-        &copy; 2026 Jeff Xie. All rights reserved.
-      </footer>
-
     </div>
   );
 }
